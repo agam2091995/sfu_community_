@@ -1,0 +1,15 @@
+.welcome-container {
+    color: #334A52;
+    letter-spacing: 0.3px;
+}
+
+.welcome-container .card-subtitle {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 17px;
+}
+
+.welcome-container a {
+    color: #007bff;
+    text-decoration: blue;
+}

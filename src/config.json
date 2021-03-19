@@ -1,0 +1,10 @@
+{
+  "api": {
+    "invokeURL": "YOUR API GATEWAY INVOKE URL"
+  },
+  "cognito": {
+    "REGION": "us-east-1",
+    "USER_POOL_ID": "AWS COGNITO USER_POOL_ID",
+    "APP_CLIENT_ID": "AWS COGNITO APP_CLIENT_ID"
+  }
+}

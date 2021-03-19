@@ -1,0 +1,14 @@
+form {
+    width: 70%;
+    padding: 50px;
+    margin: 70px auto;
+    border: 1px solid #334a525d;
+    border-radius: 1rem;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+form:hover {
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+    transition: all 500ms ease-in-out;
+}

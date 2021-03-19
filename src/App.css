@@ -1,0 +1,23 @@
+.card {
+    margin: 35px auto;
+    border-radius: 11px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+    transition: all 300ms ease-in-out;
+}
+
+.card a {
+    color: #334A52;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.card h2 {
+    color: #334A52;
+    opacity: 70%;
+    font-weight: 500;
+    font-size: small;
+}

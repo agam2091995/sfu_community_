@@ -1,0 +1,21 @@
+.navigation {
+    color: #334A52!important;
+    background:#7DB3C6!important;
+}
+
+.navigation a {
+    color: #334A52!important;
+    letter-spacing: 1.1px;
+    font-weight: 700;
+    margin-top: 4px;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.navigation-brand a {
+    color: white!important;
+    font-size: x-large;
+    font-weight: 700!important;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+}
