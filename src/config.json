@@ -1,10 +1,10 @@
 {
   "api": {
-    "invokeURL": "https://4e8xfa9vd6.execute-api.us-east-1.amazonaws.com/Alpha"
+    "invokeURL": "YOUR API GATEWAY INVOKE URL"
   },
   "cognito": {
     "REGION": "us-east-1",
-    "USER_POOL_ID": "us-east-1_y1dBdL1vk",
-    "APP_CLIENT_ID": "59f2babpat82l70od8t5oioido"
+    "USER_POOL_ID": "AWS COGNITO USER_POOL_ID",
+    "APP_CLIENT_ID": "AWS COGNITO APP_CLIENT_ID"
   }
-}
+} 
