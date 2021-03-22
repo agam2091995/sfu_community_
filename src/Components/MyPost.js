@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
+import { Auth } from 'aws-amplify';
 
 function MyPost(props) {
 
@@ -26,10 +27,17 @@ function MyPost(props) {
         try {
             const res = await axios.get(`${config.api.invokeURL}/posts`);
             let myPosts = [];
-            for (let post of res.data){
-                if(post.postCreatorUsername === props.authProps.user.username){
+            for (let post of JSON.parse(res.data.body)){
+                if(props.authProps.user === null){
+                    const user = await Auth.currentAuthenticatedUser();
+                    if(post.postCreatorUsername === user.username){
+                        myPosts.push(post);
+                    }
+                }
+                else if(post.postCreatorUsername === props.authProps.user.username){
                     myPosts.push(post);
                 }
+                
             }
             setPostsData(myPosts);
             console.log(res.data)

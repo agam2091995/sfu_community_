@@ -8,26 +8,17 @@ exports.handler = async (event, context) => {
     let responseBody = '';
     let status_code = 0;
 
-    const {id, postCreatorUsername, postBody, postTitle, postDateAndTimeCreated} = event;
-
     const params = {
-        TableName: 'POSTS',
-        Item: {
-            id: id,
-            postCreatorUsername: postCreatorUsername,
-            postTitle: postTitle,
-            postBody: postBody,
-            postDateAndTimeCreated: postDateAndTimeCreated
-        }
+        TableName: 'USERS'
     };
 
     try {
-        const data = await documentClient.put(params).promise();
-        responseBody = JSON.stringify(data);
-        status_code = 201;
+        const data = await documentClient.scan(params).promise();
+        responseBody = JSON.stringify(data.Items);
+        status_code = 200;
     }
     catch(err) {
-        responseBody = `Unable to add Post: ${err}`;
+        responseBody = `Unable to get Users: ${err}`;
         status_code = 403;
     }
 
@@ -43,5 +34,5 @@ exports.handler = async (event, context) => {
     };
 
     return response;
-};
 
+};

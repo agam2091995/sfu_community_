@@ -21,8 +21,9 @@ function Post(props) {
     async function fetchPosts() {
         try {
             const res = await axios.get(`${config.api.invokeURL}/posts`);
-            setPostsData(res.data);
-            console.log(res.data)
+            
+            setPostsData(JSON.parse(res.data.body));
+            console.log(JSON.parse(res.data.body))
         }
         catch (err) {
             console.log("error fetching posts: ", err)
