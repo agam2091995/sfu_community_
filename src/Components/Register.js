@@ -115,7 +115,7 @@ function Register(props) {
                 <Form.Group controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="I agree to all terms and conditions" required />
                 </Form.Group>
-                <div><h3 style={{color: 'red'}}>{error.message}</h3></div>
+                 <div><h3 style={{color: 'red'}}></h3></div>
                 <Button variant="primary" type="submit">
                     Register
                 </Button>
