@@ -68,7 +68,7 @@ function Register(props) {
             console.log(res);
 
             setRedirectLink(
-                <Redirect to={'/welcome'}/>
+                <Redirect to={'/login'}/>
             )
         }
         catch (err) {
