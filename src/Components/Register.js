@@ -73,6 +73,9 @@ function Register(props) {
         }
         catch (err) {
             setError(err);
+            setRedirectLink(
+                <Redirect to={'/login'}/>
+            )
         }
     }
 
